@@ -7,7 +7,7 @@ import { JhiEventManager, JhiParseLinks, JhiAlertService } from '../../core';
 
 import { ITEMS_PER_PAGE } from '../../shared';
 import { Principal, UserService, User } from '../../core';
-import { UserMgmtDeleteDialogComponent } from '../../admin';
+import { UserMgmtDeleteDialogComponent } from '../../admin/user-management/user-management-delete-dialog.component';
 
 @Component({
     selector: 'jhi-user-mgmt',
