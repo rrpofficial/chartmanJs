@@ -5,19 +5,10 @@ import { DemoSharedModule } from '../shared';
 
 import {
     adminState,
-    AuditsComponent,
     UserMgmtComponent,
     UserMgmtDetailComponent,
     UserMgmtUpdateComponent,
     UserMgmtDeleteDialogComponent,
-    LogsComponent,
-    JhiMetricsMonitoringModalComponent,
-    JhiMetricsMonitoringComponent,
-    JhiHealthModalComponent,
-    JhiHealthCheckComponent,
-    JhiConfigurationComponent,
-    JhiDocsComponent,
-    JhiTrackerComponent
 } from './';
 
 @NgModule({
@@ -27,21 +18,12 @@ import {
         /* jhipster-needle-add-admin-module - JHipster will add admin modules here */
     ],
     declarations: [
-        AuditsComponent,
         UserMgmtComponent,
         UserMgmtDetailComponent,
         UserMgmtUpdateComponent,
         UserMgmtDeleteDialogComponent,
-        LogsComponent,
-        JhiConfigurationComponent,
-        JhiHealthCheckComponent,
-        JhiHealthModalComponent,
-        JhiDocsComponent,
-        JhiTrackerComponent,
-        JhiMetricsMonitoringComponent,
-        JhiMetricsMonitoringModalComponent
     ],
-    entryComponents: [UserMgmtDeleteDialogComponent, JhiHealthModalComponent, JhiMetricsMonitoringModalComponent],
+    entryComponents: [UserMgmtDeleteDialogComponent],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class DemoAdminModule {}

@@ -1,5 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
-import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
+import { JhiEventManager, JhiAlertService } from '../../core';
 import { Subscription } from 'rxjs';
 
 @Component({

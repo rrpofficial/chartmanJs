@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot, Routes, CanActivate } from '@angular/router';
-import { JhiPaginationUtil, JhiResolvePagingParams } from 'ng-jhipster';
+import { JhiPaginationUtil, JhiResolvePagingParams } from '../../core';
 
 import { Principal, User, UserService } from '../../core';
 import { UserMgmtComponent } from './user-management.component';
