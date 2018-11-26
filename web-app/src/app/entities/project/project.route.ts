@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpResponse } from '@angular/common/http';
 import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot, Routes } from '@angular/router';
-import { UserRouteAccessService } from 'app/core';
+import { UserRouteAccessService } from '../../core';
 import { Observable, of } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
-import { Project } from 'app/shared/model/project.model';
+import { Project } from '../../shared/model/project.model';
 import { ProjectService } from './project.service';
 import { ProjectComponent } from './project.component';
 import { ProjectDetailComponent } from './project-detail.component';
 import { ProjectUpdateComponent } from './project-update.component';
 import { ProjectDeletePopupComponent } from './project-delete-dialog.component';
-import { IProject } from 'app/shared/model/project.model';
+import { IProject } from '../../shared/model/project.model';
 
 @Injectable({ providedIn: 'root' })
 export class ProjectResolve implements Resolve<IProject> {

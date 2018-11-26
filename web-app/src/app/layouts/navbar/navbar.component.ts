@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
-import { VERSION } from 'app/app.constants';
-import { Principal, LoginModalService, LoginService } from 'app/core';
+import { VERSION } from '../../app.constants';
+import { Principal, LoginModalService, LoginService } from '../../core';
 import { ProfileService } from '../profiles/profile.service';
 
 @Component({

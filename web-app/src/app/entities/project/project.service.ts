@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-import { SERVER_API_URL } from 'app/app.constants';
-import { createRequestOption } from 'app/shared';
-import { IProject } from 'app/shared/model/project.model';
+import { SERVER_API_URL } from '../../app.constants';
+import { createRequestOption } from '../../shared';
+import { IProject } from '../../shared/model/project.model';
 
 type EntityResponseType = HttpResponse<IProject>;
 type EntityArrayResponseType = HttpResponse<IProject[]>;

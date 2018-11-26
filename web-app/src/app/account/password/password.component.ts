@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Principal } from 'app/core';
+import { Principal } from '../../core';
 import { PasswordService } from './password.service';
 
 @Component({

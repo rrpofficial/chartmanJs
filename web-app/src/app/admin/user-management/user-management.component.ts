@@ -5,9 +5,9 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ActivatedRoute, Router } from '@angular/router';
 import { JhiEventManager, JhiParseLinks, JhiAlertService } from 'ng-jhipster';
 
-import { ITEMS_PER_PAGE } from 'app/shared';
-import { Principal, UserService, User } from 'app/core';
-import { UserMgmtDeleteDialogComponent } from 'app/admin';
+import { ITEMS_PER_PAGE } from '../../shared';
+import { Principal, UserService, User } from '../../core';
+import { UserMgmtDeleteDialogComponent } from '../../admin';
 
 @Component({
     selector: 'jhi-user-mgmt',

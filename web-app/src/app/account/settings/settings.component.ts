@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Principal, AccountService } from 'app/core';
+import { Principal, AccountService } from '../../core';
 
 @Component({
     selector: 'jhi-settings',

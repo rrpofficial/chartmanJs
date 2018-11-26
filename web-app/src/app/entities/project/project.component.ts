@@ -4,10 +4,10 @@ import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { JhiEventManager, JhiParseLinks, JhiAlertService } from 'ng-jhipster';
 
-import { IProject } from 'app/shared/model/project.model';
-import { Principal } from 'app/core';
+import { IProject } from '../../shared/model/project.model';
+import { Principal } from '../../core';
 
-import { ITEMS_PER_PAGE } from 'app/shared';
+import { ITEMS_PER_PAGE } from '../../shared';
 import { ProjectService } from './project.service';
 
 @Component({

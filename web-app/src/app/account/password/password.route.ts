@@ -1,6 +1,6 @@
 import { Route } from '@angular/router';
 
-import { UserRouteAccessService } from 'app/core';
+import { UserRouteAccessService } from '../../core';
 import { PasswordComponent } from './password.component';
 
 export const passwordRoute: Route = {

@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { HttpResponse, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-import { IProject } from 'app/shared/model/project.model';
+import { IProject } from '../../shared/model/project.model';
 import { ProjectService } from './project.service';
 
 @Component({
