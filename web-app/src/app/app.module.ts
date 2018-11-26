@@ -11,8 +11,8 @@ import { AuthInterceptor } from './blocks/interceptor/auth.interceptor';
 import { AuthExpiredInterceptor } from './blocks/interceptor/auth-expired.interceptor';
 import { ErrorHandlerInterceptor } from './blocks/interceptor/errorhandler.interceptor';
 import { NotificationInterceptor } from './blocks/interceptor/notification.interceptor';
-// import { DemoSharedModule } from 'shared';
-// import { DemoCoreModule } from 'core';
+import { DemoSharedModule } from './shared';
+import { DemoCoreModule } from './core';
 import { AppRoutesModule } from './app-routing.module';
 import { DemoHomeModule } from './home/home.module';
 import { DemoAccountModule } from './account/account.module';
@@ -31,8 +31,8 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
             alertAsToast: false,
             alertTimeout: 5000
         }),
-        // DemoSharedModule.forRoot(),
-        // DemoCoreModule,
+        DemoSharedModule.forRoot(),
+        DemoCoreModule,
         DemoHomeModule,
         DemoAccountModule,
         // jhipster-needle-angular-add-module JHipster will add new module here
