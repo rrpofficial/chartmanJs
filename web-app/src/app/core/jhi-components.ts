@@ -34,9 +34,11 @@ import {
     JhiSortByDirective
 } from './';
 import {
-    JhiItemCountComponent,
+    JhiItemCountComponent
+} from './component/jhi-item-count.component';
+import {
     JhiBooleanComponent
-} from './';
+} from './component/jhi-boolean.component';
 
 export const JHI_PIPES = [
     JhiCapitalizePipe,
