@@ -44,12 +44,16 @@ export class RegisterComponent implements OnInit, AfterViewInit {
             this.error = null;
             this.errorUserExists = null;
             this.errorEmailExists = null;
-            this.registerAccount.langKey = 'en';
+            // this.registerAccount.langKey = 'en';
             this.registerService.save(this.registerAccount).subscribe(
                 () => {
                     this.success = true;
                 },
-                response => this.processError(response)
+                (response) => {
+                    this.processError(response);
+                    // console.log(JSON.stringify(response.error.type));
+                    // console.log('This is error constant email in use',EMAIL_ALREADY_USED_TYPE);
+                }
             );
         }
     }
@@ -61,9 +65,11 @@ export class RegisterComponent implements OnInit, AfterViewInit {
     private processError(response: HttpErrorResponse) {
         console.log(response);
         this.success = null;
-        if (response.status === 400 && response.error.type === LOGIN_ALREADY_USED_TYPE) {
-            this.errorUserExists = 'ERROR';
-        } else if (response.status === 400 && response.error.type === EMAIL_ALREADY_USED_TYPE) {
+        // if (response.status === 400 && response.error.type === LOGIN_ALREADY_USED_TYPE) {
+        //     this.errorUserExists = 'ERROR';
+        // } else 
+        if (response.status === 400 && response.error.type === EMAIL_ALREADY_USED_TYPE) {
+            // console.log('******* error is processed....')
             this.errorEmailExists = 'ERROR';
         } else {
             this.error = 'ERROR';

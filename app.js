@@ -20,6 +20,6 @@ app.use(passport.session());
 
 require("./middleware/passport")(passport);
 
-app.listen(9000, ()=>{
+app.listen(3000, ()=>{
     console.log("Server started");
 });
