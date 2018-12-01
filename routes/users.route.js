@@ -9,7 +9,7 @@ const { getEncryptedPwd }  = require('../middleware/crypto');
 router.get('/', async (req, res)=>{
    const users = await User
     .find()
-    .select({'_id' : 1, 'name' : 1, 'email' : 1, 'roles': 1})
+    .select({'_id' : 1, 'name' : 1, 'email' : 1, 'authorities': 1})
     .sort({name : 1});
     console.log(users);
     res.send(users)
@@ -18,7 +18,7 @@ router.get('/', async (req, res)=>{
 router.get('/:id', async (req, res)=>{
     const user = await User
      .findById(req.params.id)
-     .select({'_id' : 1, 'name' : 1, 'email' : 1, 'roles': 1})
+     .select({'_id' : 1, 'name' : 1, 'email' : 1, 'authorities': 1})
     //  console.log(user);
      res.send(user);
  });
@@ -38,7 +38,7 @@ router.post('/', async (req, res)=>{
 
     user.password = await getEncryptedPwd(req.body.password);
     result = await user.save();
-    res.send(_.pick(result, ['_id', 'name', 'email', 'roles', 'status']));
+    res.send(_.pick(result, ['_id', 'name', 'email', 'authorities', 'status']));
 });
 
 module.exports = router;

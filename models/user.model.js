@@ -21,16 +21,15 @@ const userSchema = new mongoose.Schema(
             minlength: 8,
             maxlength : 1024,
         },
-        status : {
-            type : String,
-            minlength : 3,
-            maxlength : 10,
-            'default' : 'active'
+        activated : {
+            type : Boolean,
+            'default' : true
         },
-        roles : {
+        authorities : {
             type : Array,
-            'default' : ['user']
-        }
+            'default' : ['ROLE_USER']
+        },
+        imageUrl : String
 }
 );
 
