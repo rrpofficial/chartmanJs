@@ -21,9 +21,15 @@ const userSchema = new mongoose.Schema(
             minlength: 8,
             maxlength : 1024,
         },
-        isAdmin : {
-            type : Boolean,
-            default : false
+        status : {
+            type : String,
+            minlength : 3,
+            maxlength : 10,
+            'default' : 'active'
+        },
+        roles : {
+            type : Array,
+            'default' : ['user']
         }
 }
 );
@@ -33,7 +39,7 @@ function validateUser(user){
         name : Joi.string().min(5).max(50).required(),
         email : Joi.string().min(5).max(255).required().email(),
         password : Joi.string().min(8).max(1024).required(),
-        isAdmin : Joi.boolean()
+        // isAdmin : Joi.boolean()
     }
     return Joi.validate(user, schema);
 }
