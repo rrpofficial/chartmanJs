@@ -40,10 +40,10 @@ export class SettingsComponent implements OnInit {
         return {
             activated: account.activated,
             email: account.email,
-            firstName: account.firstName,
-            langKey: account.langKey,
-            lastName: account.lastName,
-            login: account.login,
+            name: account.name,
+            // langKey: account.langKey,
+            // lastName: account.lastName,
+            // login: account.login,
             imageUrl: account.imageUrl
         };
     }
