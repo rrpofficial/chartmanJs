@@ -14,8 +14,8 @@ import { StateStorageService } from '../../core/auth/state-storage.service';
 export class JhiLoginModalComponent implements AfterViewInit {
     authenticationError: boolean;
     password: string;
-    rememberMe: boolean;
-    username: string;
+    // rememberMe: boolean;
+    email: string;
     credentials: any;
 
     constructor(
@@ -31,14 +31,14 @@ export class JhiLoginModalComponent implements AfterViewInit {
     }
 
     ngAfterViewInit() {
-        setTimeout(() => this.renderer.invokeElementMethod(this.elementRef.nativeElement.querySelector('#username'), 'focus', []), 0);
+        setTimeout(() => this.renderer.invokeElementMethod(this.elementRef.nativeElement.querySelector('#email'), 'focus', []), 0);
     }
 
     cancel() {
         this.credentials = {
-            username: null,
+            email: null,
             password: null,
-            rememberMe: true
+            // rememberMe: true
         };
         this.authenticationError = false;
         this.activeModal.dismiss('cancel');
@@ -47,9 +47,9 @@ export class JhiLoginModalComponent implements AfterViewInit {
     login() {
         this.loginService
             .login({
-                username: this.username,
+                email: this.email,
                 password: this.password,
-                rememberMe: this.rememberMe
+                // rememberMe: this.rememberMe
             })
             .then(() => {
                 this.authenticationError = false;

@@ -23,14 +23,14 @@ router.post('/', async (req, res)=>{
     const isValid = await comparePwd(req.body.password, user.password);
     if(!isValid) return res.status(400).send({message : 'Invalid  password'});
 
-    const token = jwt.sign(_.pick(user, ['_id', 'name', 'email', 'roles']), config.get('jwtPrivateKey'), {
+    const token = jwt.sign(_.pick(user, ['_id', 'name', 'email', 'authorities']), config.get('jwtPrivateKey'), {
          expiresIn : 86400
 
     } );
    
-    res.header('x-auth-token', token);
-    res.header('Access-Control-Expose-Headers', 'x-auth-token');
-    res.send({'success' : true, 'message':'Authentication success', 'token': token});
+    res.header('Authorization', "Bearer "+token);
+    res.header('Access-Control-Expose-Headers', 'Authorization');
+    res.send({'success' : true, 'message':'Authentication success', 'token': 'Bearer '+token});
 
 });
 
